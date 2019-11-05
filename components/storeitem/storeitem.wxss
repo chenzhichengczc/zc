@@ -24,7 +24,7 @@ flex-direction: row;
 }
 .store .info .name{
     color: #111111;
-    font-size: 40rpx;
+    font-size: 32rpx;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -54,12 +54,13 @@ flex-direction: row;
 }
 
 .store .info .type_km .type{
-        overflow: hidden;
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     flex: 1;
 }
 
-.store .info .type_km km{
-
+.by{
+  color: #777777;
+  font-size:28rpx;
 }

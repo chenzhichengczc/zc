@@ -7,17 +7,17 @@
   </view>
   <view class='navbtns'>
     <view class='navitem nearby' bindtap='navitation' data-id='01'>
-      附近
+      全部
       <image src="{{selectedNav === '01' ? '../../images/arrow_up.png' : '../../images/arrow_down.png'}}"></image>
     </view>
     <view class='line'></view>
     <view class='navitem sort' bindtap='navitation' data-id='02'>
-      全部分类
+      全部状态
       <image src="{{selectedNav === '02' ? '../../images/arrow_up.png' : '../../images/arrow_down.png'}}"></image>
     </view>
     <view class='line'></view>
     <view class='navitem rank' bindtap='navitation' data-id='03'>
-      排序
+      金额最多
       <image src="{{selectedNav === '03' ? '../../images/arrow_up.png' : '../../images/arrow_down.png'}}"></image>
     </view>
   </view>

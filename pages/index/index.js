@@ -5,10 +5,9 @@ Page({
   data: {
     width: app.systemInfo.windowWidth,
     height: app.systemInfo.windowHeight,
-    banner: ['http://i.dxlfile.com/adm/material/2016_12_12/20161212135600242250.jpg',
-      'http://i.dxlfile.com/adm/material/2017_01_04/2017010411165785666.jpg',
-      'http://i.dxlfile.com/adm/material/2017_01_04/20170104140739205869.jpg',
-      'http://i.dxlfile.com/adm/material/2017_01_16/20170116171332214897.jpg'],
+    banner: ['http://img0.imgtn.bdimg.com/it/u=4137531265,3153855591&fm=26&gp=0.jpg',
+      'http://img4.imgtn.bdimg.com/it/u=2048658562,1100726418&fm=26&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2546124889,2579031657&fm=26&gp=0.jpg'],
     functions: [
       {
         url: '../../images/i01.png',
@@ -44,76 +43,11 @@ Page({
 
     goods: [
       {
-        url: 'http://p1.meituan.net/wedding/5c683d257d0a418c146308b455bb5b582651471.jpg%40640w_480h_0e_1l%7Cwatermark%3D0',
-        name: '热烈如初',
+        url: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1758762147,1685935779&fm=26&gp=0.jpg',
+        name: '冒险游戏《基利斯督手记》',
         price: '13800',
-        oldprice: '19800',
         sell: '5',
-        address: '二环路东五段万达广场8单元2101(近成仁公交站)',
-        km: '1.1km'
-      },
-      {
-        url: 'http://p1.meituan.net/wedding/adf460e1e88714cb30e118387de0b09e3536225.jpg%40640w_480h_0e_1l%7Cwatermark%3D0',
-        name: '全包好超值无敌到爆宇宙套餐',
-        price: '8800',
-        oldprice: '10800',
-        sell: '20',
-        address: '东大街芷泉段88号时代豪庭(香格里拉酒店)',
-        km: '1.8km'
-      },
-      {
-        url: 'http://p0.meituan.net/wedding/4972ddf9c2067c193f6408f006f818c02213163.jpg%40640w_480h_0e_1l%7Cwatermark%3D0',
-        name: '林中奇缘',
-        price: '15800',
-        oldprice: '20800',
-        sell: '15',
-        address: '总府路46号1-4楼(盐市口红旗商场斜对面)',
-        km: '2.4km'
-      },
-      {
-        url: 'http://p1.meituan.net/wedding/8a40a46c24c3f812586853aa5d5cb56d3134895.jpg%40640w_480h_0e_1l%7Cwatermark%3D0',
-        name: '清新云系婚礼经典款',
-        price: '12900',
-        oldprice: '15800',
-        sell: '25',
-        address: '天府新区益州大道588号益州国际写字楼10楼',
-        km: '3.4km'
-      },
-      {
-        url: 'http://p1.meituan.net/wedding/5c683d257d0a418c146308b455bb5b582651471.jpg%40640w_480h_0e_1l%7Cwatermark%3D0',
-        name: '热烈如初',
-        price: '13800',
-        oldprice: '19800',
-        sell: '5',
-        address: '二环路东五段万达广场8单元2101(近成仁公交站)',
-        km: '1.1km'
-      },
-      {
-        url: 'http://p1.meituan.net/wedding/adf460e1e88714cb30e118387de0b09e3536225.jpg%40640w_480h_0e_1l%7Cwatermark%3D0',
-        name: '全包好超值无敌到爆宇宙套餐',
-        price: '8800',
-        oldprice: '10800',
-        sell: '20',
-        address: '东大街芷泉段88号时代豪庭(香格里拉酒店)',
-        km: '1.8km'
-      },
-      {
-        url: 'http://p0.meituan.net/wedding/4972ddf9c2067c193f6408f006f818c02213163.jpg%40640w_480h_0e_1l%7Cwatermark%3D0',
-        name: '林中奇缘',
-        price: '15800',
-        oldprice: '20800',
-        sell: '15',
-        address: '总府路46号1-4楼(盐市口红旗商场斜对面)',
-        km: '2.4km'
-      },
-      {
-        url: 'http://p1.meituan.net/wedding/8a40a46c24c3f812586853aa5d5cb56d3134895.jpg%40640w_480h_0e_1l%7Cwatermark%3D0',
-        name: '清新云系婚礼经典款',
-        price: '12900',
-        oldprice: '15800',
-        sell: '25',
-        address: '天府新区益州大道588号益州国际写字楼10楼',
-        km: '3.4km'
+        depict: '基督”一词的详写，为天主教的称呼，是希腊文“CHRISTOS”（英CHRIST）的音译',
       }
     ]
   },

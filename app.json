@@ -1,16 +1,42 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/storelist/storelist",
     "pages/store/store",
     "pages/goods/goods",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "components/serch/serch"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#181818",
     "navigationBarTitleText": "众筹",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#8f74fa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "众筹首页",
+        "iconPath": "/images/home2.png",
+        "selectedIconPath": "/images/home1.png"
+      },
+      {
+        "pagePath": "pages/storelist/storelist",
+        "text": "全部项目",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/user_active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "个人中心",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/user_active.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -4,12 +4,13 @@
           <image src="{{store.photo}}" mode="aspectFill"></image>
           <view class='info'>
             <view class='name'>{{store.name}}</view>
-            <view class='star_price'>
+            <view class='by'>by {{store.by}}</view>
+            <!-- <view class='star_price'>
               <template is='star' data="{{count:store.star}}" /> {{store.price}}
-            </view>
+            </view> -->
             <view class='type_km'>
-              <view class='type'>{{store.buztype}}</view>
-              <view class='km'>{{store.km}}</view>
+              <view class='type'>已筹集 ￥{{store.price}}</view>
+              <view class='km'>进度 ： {{store.rate}}%</view>
             </view>
           </view>
         </view>

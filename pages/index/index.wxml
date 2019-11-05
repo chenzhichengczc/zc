@@ -1,4 +1,3 @@
-<import src="../../components/good/good.wxml" />
 <!--index.wxml-->
 <scroll-view class='scroller' style="width:{{width}}px;height:{{height}}px;" scroll-y="true" lower-threshold="800" bindscrolltolower="loadmore">
   <swiper class='banners' indicator-dots="true" autoplay="true" interval="4000" duration="1000" indicator-color="#60ffffff" indicator-active-color="#fff">
@@ -8,21 +7,65 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class='funcs'>
-    <view class='func' wx:for="{{functions}}" wx:for-item='item' wx:key='item.id' bindtap='fucClick' data-id="{{item.id}}">
-      <image src="{{item.url}}" mode="aspectFill"></image>
-      <view class='name'>{{item.name}}</view>
+  <searchBar id="SearchBar" addflag="{{addflag}}" addimg="{{addimg}}" bind:addhandle="addhandle" searchstr="{{searchstr}}" bind:searchList="searchList" bind:endsearchList="endsearchList" bind:cancelsearch="cancelsearch" bind:activity_clear="activity_clear">
+  </searchBar>
+
+
+  <view class="tj" style="height:{{height/2}}px">
+    <view class='title'>精品推荐</view>
+    <view class="layout_horizontal">
+      <view class="box">
+        <view>
+          <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4081917548,1535878172&fm=26&gp=0.jpg" style="width:{{width}}rpx" />
+        </view>
+        <view>
+          <image src="https://f10.baidu.com/it/u=835487077,130536346&fm=72" style="width:{{width}}rpx" />
+        </view>
+      </view>
+      <view class="box">
+        <view>
+          <image src=" http://a3.att.hudong.com/11/53/20300542588808148877531186835_s.jpg" style="width:{{width}}rpx" />
+        </view>
+        <view>
+          <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2494538167,1389080532&fm=26&gp=0.jpg" style="width:{{width}}rpx" />
+        </view>
+      </view>
+
     </view>
   </view>
+
+
   <view class='maylike'>
-    <view class='title'>猜你喜欢</view>
+    <view class='title'>预售项目</view>
     <view class='goods'>
-
       <block wx:for="{{goods}}" wx:for-item='good' wx:key='*this'>
+        <view class='good' bindtap='goodDetail'>
+          <view>
+            <image src="{{good.url}}" mode="aspectFill"></image>
+            <view class='mask'></view>
+            <view class='info'>
+              <view class='title'>
+                <text>{{good.name}}</text>
+              </view>
+              <view class='detail'>
+                <view class='timeinfo'>
+                  <text>{{good.depict}}</text>
+                </view>
+                <view class='depict'>
+                  <text>{{good.km}}</text>
+                </view>
+              </view>
+            </view>
 
-        <template is="good" data="{{good:good}}" />
+            <view class='bottom'>
+              <view class='price'>已筹集 ：￥{{good.price}}</view>
+              <view class='oldprice'></view>
+              <view class='selled'>筹集人数：{{good.sell}}人</view>
+            </view>
+          </view>
+        </view>
       </block>
-
     </view>
   </view>
+
 </scroll-view>
