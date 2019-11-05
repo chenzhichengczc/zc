@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/storelist/storelist",
     "pages/store/store",
+    "pages/my/my",
     "pages/goods/goods",
     "pages/logs/logs",
     "components/serch/serch"
@@ -27,11 +28,11 @@
       {
         "pagePath": "pages/storelist/storelist",
         "text": "全部项目",
-        "iconPath": "/images/user.png",
-        "selectedIconPath": "/images/user_active.png"
+        "iconPath": "/images/order.png",
+        "selectedIconPath": "/images/order_active.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/my/my",
         "text": "个人中心",
         "iconPath": "/images/user.png",
         "selectedIconPath": "/images/user_active.png"
