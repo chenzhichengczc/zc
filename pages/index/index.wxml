@@ -52,7 +52,7 @@
                   <text>{{good.depict}}</text>
                 </view>
                 <view class='depict'>
-                  <text>{{good.km}}</text>
+                  <text>by {{good.by}}</text>
                 </view>
               </view>
             </view>

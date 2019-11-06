@@ -23,10 +23,11 @@
       </block>
     </view>
     <view class='selled'>
-      <icon type="success_circle" color="#999999" size="16"></icon>已售{{goods.selled}}</view>
+      <icon type="success_circle" color="#999999" size="16"></icon>已筹 ￥{{goods.price}}
+    </view>
   </view>
   <view class='store'>
-    <view class='title'>适用商户</view>
+    <view class='title'>众筹商户出自</view>
     <view class='storeinfo'>
       <view class='storemain'>
         <view class='name'>{{goods.store.name}}</view>
@@ -38,47 +39,54 @@
       <view class='verticalline'></view>
       <image src="../../images/phone_orange.png" class='call' bindtap='callPhone'></image>
     </view>
-    <view class='location' bindtap='location'>
+    <view class='location'>
       <image src="../../images/position.png" mode="aspectFill" class='icon'></image>
       <view class='info'>{{goods.store.address}}</view>
       <image src="../../images/arrow_left.png" class='arrow_left'></image>
     </view>
   </view>
-  <view class='grounp border_top_bottom'>
-    <view class='title'>团购详情</view>
-    <block wx:for='{{goods.group.goods}}' wx:for-item='good' wx:key='good.id'>
-      <view class='grounp_item'>
-        <view class='name'>{{good.name}}</view>
-        <view class='count'>{{good.count}}</view>
-        <view class='value'>{{good.value}}</view>
+
+  <view class="store">
+    <view class='title'>众筹进度</view>
+    <view class='storeinfo'>
+      <view class='storemain'>
+        <view class='index'>
+          <view wx:for="{{goods.funding.images}}" wx:key style='transform:translateX({{-index*30}}rpx)'>
+            <image class='text' src='{{item}}' mode='aspectFill'></image>
+          </view>
+          <view class="funding-person">
+            100人看好
+            <image src="../../images/arrow_left.png" class='arrow_left'></image>
+          </view>
+        </view>
+
       </view>
-    </block>
-    <view class='oldvalue'>
-      <view class='name'>总价值</view>
-      <view class='value'>{{goods.group.oldValue}}元</view>
     </view>
-    <view class='nowvaule'>
-      <view class='name'>团购价</view>
-      <view class='value'>{{goods.group.grounpValue}}元</view>
-    </view>
+  </view>
+
+  <view class='grounp border_top_bottom'>
+    <view class='title'>项目详情</view>
     <view class='describe'>
       <text>{{goods.group.describe}}</text>
     </view>
   </view>
-  <view class='notice border_top_bottom'>
-    <view class='title'>购买须知</view>
-    <block wx:for='{{goods.guide}}' wx:for-item='gguid' wx:key='gguid.id'>
-      <view class='name'>{{gguid.name}}</view>
-      <block wx:for='{{gguid.info}}' wx:key='*this'>
-        <view class='info'>
-          <view class='point'></view>{{item}}</view>
-      </block>
-    </block>
-  </view>
+
   <template is='comment' data='{{comments:goods.comments,count:goods.comments.length}}' />
 </view>
 <view class='buy'>
-  <view class='price'>￥{{goods.group.grounpValue}}</view>
-  <view class='oldprice'>￥{{goods.group.oldValue}}</view>
-  <view class='gobuy' bindtap='gobuy'>立即抢购</view>
+  <view class="box-list">
+    <image src="../../images/home2.png"></image>
+  </view>
+  <view class="box-list">
+    <image src="../../images/goods_service.png"></image>
+    <button open-type="contact" session-from="weapp"></button>
+  </view>
+  <view class="box-list" bindtap="{{favicon == 0 ? 'fav':'del'}}">
+    <image wx:if="{{favicon == 0}}" src="../../images/goods_collect.png"></image>
+    <image wx:if="{{favicon == 1}}" src="../../images/goods_collect_checked.png"></image>
+    <view class="shop-num">{{100}}</view>
+  </view>
+   <view class="box-title buy-now">
+        <view class="box-now-buy npx" bindtap="toAddShopCar">立即购买支持</view>
+      </view>
 </view>
