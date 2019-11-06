@@ -42,31 +42,18 @@
     </navigator>
   </view>
   <view class="userinfo-item-box">
-    <navigator  hover-class="none" class="userinfo-item" url="/pages/withdraw/withdraw">
-      <image src="../../images/profile_tegral.png"></image>
-      <view>我的余额</view>
-    </navigator>
-    <navigator hover-class="none" class="userinfo-item" url="/pages/score/score">
-      <image src="../../images/jifen.png"></image>
-      <view>我的积分</view>
-    </navigator>
     <navigator hover-class="none" class="userinfo-item" url="/pages/my-coupons/my-coupons">
       <image src="../../images/profile_ticket.png"></image>
-      <view>我的礼券</view>
+      <view>优惠券</view>
     </navigator>
     <navigator hover-class="none" class="userinfo-item" url="/pages/fav-list/fav-list">
       <image src="../../images/profile_collection.png"></image>
-      <view>我的收藏</view>
+      <view>发起的项目</view>
     </navigator>
     <navigator hover-class="none" class="userinfo-item" url="/pages/address/address">
       <image src="../../images/profile_address.png"></image>
-      <view>我的地址</view>
+      <view>我的收货地址</view>
     </navigator>
-    <view class="userinfo-item">
-      <image src="../../images/profile_service.png"></image>
-      <view>联系客服</view>
-      <button open-type="contact" session-from="weapp"></button>
-    </view>
   </view>
   <view class="userinfo-info">
     {{getInfo}}
