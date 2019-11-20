@@ -48,11 +48,11 @@
     </navigator>
     <navigator hover-class="none" class="userinfo-item" url="/pages/fav-list/fav-list">
       <image src="../../images/profile_collection.png"></image>
-      <view>发起的项目</view>
+      <view>发起项目</view>
     </navigator>
     <navigator hover-class="none" class="userinfo-item" url="/pages/address/address">
       <image src="../../images/profile_address.png"></image>
-      <view>我的收货地址</view>
+      <view>收货地址</view>
     </navigator>
   </view>
   <view class="userinfo-info">

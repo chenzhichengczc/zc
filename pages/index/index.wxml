@@ -7,27 +7,29 @@
       </swiper-item>
     </block>
   </swiper>
-  <searchBar id="SearchBar" addflag="{{addflag}}" addimg="{{addimg}}" bind:addhandle="addhandle" searchstr="{{searchstr}}" bind:searchList="searchList" bind:endsearchList="endsearchList" bind:cancelsearch="cancelsearch" bind:activity_clear="activity_clear">
-  </searchBar>
 
+  <view class='search'>
+    <icon type="search" color="#4c4c4c" size="18"></icon>
+    <input type="text" maxlength="100" placeholder="输入项目名" placeholder-style="color:#999999" />
+  </view>
 
-  <view class="tj" style="height:{{height/2}}px">
+  <view class="tj" style="height:{{height/2}}px;background-color:#fff">
     <view class='title'>精品推荐</view>
     <view class="layout_horizontal">
-      <view class="box">
+      <view class="box" style="width:{{width}}rpx">
         <view>
-          <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4081917548,1535878172&fm=26&gp=0.jpg" style="width:{{width}}rpx" />
+          <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4081917548,1535878172&fm=26&gp=0.jpg"  />
         </view>
         <view>
           <image src="https://f10.baidu.com/it/u=835487077,130536346&fm=72" style="width:{{width}}rpx" />
         </view>
       </view>
-      <view class="box">
+      <view class="box" style="width:{{width}}rpx" >
         <view>
           <image src=" http://a3.att.hudong.com/11/53/20300542588808148877531186835_s.jpg" style="width:{{width}}rpx" />
         </view>
         <view>
-          <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2494538167,1389080532&fm=26&gp=0.jpg" style="width:{{width}}rpx" />
+          <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2494538167,1389080532&fm=26&gp=0.jpg" />
         </view>
       </view>
 
@@ -39,28 +41,28 @@
     <view class='title'>预售项目</view>
     <view class='goods'>
       <block wx:for="{{goods}}" wx:for-item='good' wx:key='*this'>
-        <view class='good' bindtap='goodDetail'>
+        <view class='good' bindtap='goodDetail' data-save="{{good}}">
           <view>
-            <image src="{{good.url}}" mode="aspectFill"></image>
+            <image src="{{good.imgUrl}}" mode="aspectFill"></image>
             <view class='mask'></view>
             <view class='info'>
               <view class='title'>
-                <text>{{good.name}}</text>
+                <text>{{good.fundingName}}</text>
               </view>
               <view class='detail'>
                 <view class='timeinfo'>
-                  <text>{{good.depict}}</text>
+                  <text>{{good.fundingIntroduction}}</text>
                 </view>
                 <view class='depict'>
-                  <text>by {{good.by}}</text>
+                  <text>by {{good.businessName}}</text>
                 </view>
               </view>
             </view>
 
             <view class='bottom'>
-              <view class='price'>已筹集 ：￥{{good.price}}</view>
+              <view class='price'>已筹集 ：￥{{good.fundingNow}}</view>
               <view class='oldprice'></view>
-              <view class='selled'>筹集人数：{{good.sell}}人</view>
+              <view class='selled'>筹集人数：{{good.fundingNumer}}人</view>
             </view>
           </view>
         </view>

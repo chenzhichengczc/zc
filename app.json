@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/goods/goods",
+   
     "pages/index/index",
+    "pages/goods/goods",
+    "pages/createProject/createProject",
     "pages/storelist/storelist",
     "pages/store/store",
     "pages/my/my",
-    
-    "pages/logs/logs",
-    "components/serch/serch"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,6 +30,12 @@
         "text": "全部项目",
         "iconPath": "/images/order.png",
         "selectedIconPath": "/images/order_active.png"
+      },
+      {
+        "pagePath": "pages/createProject/createProject",
+        "text": "新建众筹",
+        "iconPath": "/images/home2.png",
+        "selectedIconPath": "/images/home1.png"
       },
       {
         "pagePath": "pages/my/my",

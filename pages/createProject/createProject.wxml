@@ -1,0 +1,181 @@
+<!--立即定制-->
+<form bindsubmit="submit">
+  <view class="app">
+    <view class="menu">
+      <text>新建定制众筹项目</text>
+      <input hidden="true" value="{{type}}" name="type" id="type" />
+    </view>
+
+    <view class="dingzhi_base_info">
+      <view class="info_item bottom_line">
+        <text class="lx_info">项目信息（请如实填写，需要审核）</text>
+      </view>
+      <view class="info_item bottom_line">
+        <text class="lt">项目主题</text>
+        <input name="" id="" placeholder="请输入您的项目主题（26字）" />
+      </view>
+    
+      <view class="info_item bottom_line">
+        <text class="lt">项目简介</text>
+        <input name="addressDetail" id="address" placeholder="请输入详细地址" />
+      </view>
+
+      <view class="info_item bottom_line">
+        <text class="lt">上限人数</text>
+        <input name="roomVolume" id="roomVolume" placeholder="请输入您的专属房间上限人数" />
+      </view>
+
+
+      <view class="info_item bottom_line">
+        <text class="lt">举行日期</text>
+        <picker mode="date" value="{{startDate}}" start="{{startPickerStartDate}}" end="{{startPickerEndDate}}" bindchange="bindDateChange" name="startDate">
+          <view class="picker">
+            {{startDate}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="info_item bottom_line">
+        <text class="lt">举行时间</text>
+        <picker mode="time" value="{{startTime}}" start="08:00" end="18:00" bindchange="bindTimeChange" name="startTime">
+          <view class="picker">
+            {{startTime}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="info_item bottom_line">
+        <text class="lt">结束日期</text>
+        <picker mode="date" value="{{endDate}}" start="{{endPickerStartDate}}" end="{{endPickerEndDate}}"  bindchange="bindEndDateChange" name="endDate">
+          <view class="picker">
+            {{endDate}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="info_item bottom_line">
+        <text class="lt">结束时间</text>
+        <picker mode="time" value="{{endTime}}" start="08:00" end="20:00" bindchange="bindEndTimeChange" name="endTime">
+          <view class="picker">
+            {{endTime}}
+          </view>
+        </picker>
+      </view>
+
+    </view>
+
+    <!--备注信息-->
+    <view class="dingzhi_base_info">
+      <view class="info_item bottom_line">
+        <text class="bz_info" >需求备注（选填,300个字以内）</text>
+      </view>
+
+      <view class="info_item">
+        <input name="content" bindblur="checkRemark" id="content" placeholder="在这里补充您的其他定制要求" />
+      </view>
+    </view>
+
+    <!--<view class="dingzhi_base_info">
+      <view class="info_item bottom_line">
+        <text class="bz_info">会员</text>
+      </view>
+      <view class='info_item'>
+        <radio-group class="radio-group" bindchange="radioChange" >
+          <label class="radio" wx:for="{{k7}}" wx:key="index">
+            <radio value="{{item.arr_guige02}}" bindtap='radio' data-id="{{item.guige_key02}}" checked="{{item.checked}}" />{{item.arr_guige02}}
+          </label>
+        </radio-group>
+      </view>
+    </view>-->
+    <!--订餐确定-->
+    <view class="dingzhi_base_info">
+      <view class="info_item bottom_line">
+        <text class="bz_info">套餐选择</text>
+      </view>
+      <view class="info_item {{totalPrice == '0' ? 'show' : 'hidden'}}" bindtap='selectMeal'>
+        <input name="setMeal" id="setMeal" placeholder="为您的小伙伴选择优质套餐" />
+        <view>
+          <image src='/images/icon_arrow.png' role='img' class='icon_arrow'></image>
+        </view>
+      </view>
+      <view class="info_item {{totalPrice == '0'  ? 'hidden' : 'show'}}">
+        <view class="info_item bottom_line">
+          <text class="lt">套餐详情</text>
+          <block wx:for='{{carArray}}' wx:index='index' wx:key='index'>
+            <view wx:if='{{item.num !=NaN}}'>{{item.name}} ({{item.num}}份) : ¥{{item.price * item.num}} </view>
+          </block>
+        </view>
+      </view>
+
+      <input style='display: none' value='{{totalPrice}}' name='totalPrice'></input>
+
+      <view class="info_item {{totalPrice == '0' ? 'hidden' : 'show'}}" bindtap='reselect'>
+        <input name="setMeal" id="setMeal" placeholder="重新选择套餐" />
+        <view>
+          <image src='/images/icon_arrow.png' role='img' class='icon_arrow'></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="dingzhi_base_info">
+      <view class="info_item bottom_line">
+        <text class="p_info">密码锁栏</text>
+      </view>
+      <view class="info_item bottom_line">
+        <text class="lt">房间密码</text>
+        <input name="plaintext" id="plaintext" placeholder="请输入房间密码" />
+      </view>
+      <view class="info_item bottom_line">
+       <text class="lt">公开密码</text>
+        <radio-group class="radio-group" >
+          <label class="radio" wx:for="{{p7}}" wx:key="index">
+            <radio value="{{item.arr_select}}"  data-id="{{item.select_key}}" bindtap="passwordRadio" />{{item.arr_select}} 
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+     <view class="dingzhi_base_info">
+      <view class="info_item bottom_line">
+        <text class="pa_info">模式</text>
+      </view>
+      <view class='info_item'>
+        <text class="lt">楼主买单</text>
+        <radio-group class="radio-group" bindchange="radioChange" >
+          <label class="radio" wx:for="{{m7}}" wx:key="index">
+            <radio value="{{item.arr_select}}" bindtap='radioPay' data-id="{{item.select_key}}" checked="{{item.checked}}" />{{item.arr_select}}
+          </label>
+        </radio-group>
+      </view>
+      <view class="info_item bottom_line" wx:if="{{isPayPre == 0 && totalPrice != 0}}">
+        <text class="lt">买单金额</text>
+        ¥<input name="amount" id="amount" placeholder="请输入每份买单金额" />
+      </view>
+    </view>
+
+    <!--联系人信息-->
+    <view class="dingzhi_base_info">
+      <view class="info_item bottom_line">
+        <text class="lx_info">联系人信息</text>
+      </view>
+
+      <view class="info_item bottom_line">
+        <text class="lt">姓名</text>
+        <input name="name" id="name" placeholder="请输入您的姓名" />
+      </view>
+
+      <view class="info_item bottom_line">
+        <text class="lt">电话号码</text>
+        <input name="mobile" id="mobile" placeholder="请输入您的电话号码" />
+      </view>
+
+      <view class="info_item">
+        <text class="lt">邮箱</text>
+        <input name="email" id="email" placeholder="请输入您的电子邮箱" />
+      </view>
+    </view>
+
+    <button form-type="submit" class="btn_sure_dingzhi">点击确认房间审核</button>
+
+  </view>
+</form>

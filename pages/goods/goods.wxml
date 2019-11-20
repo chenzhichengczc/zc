@@ -3,7 +3,7 @@
 <view>
   <view class='top'>
     <swiper class='banners' indicator-dots="true" autoplay="true" interval="4000" duration="1000" indicator-color="#60ffffff" indicator-active-color="#fff">
-      <block wx:for="{{goods.photo}}" wx:key="*this">
+      <block wx:for="{{goodDetail.imgUrl}}" wx:key="*this">
         <swiper-item>
           <image src="{{item}}" class="banner" mode="aspectFill" bindtap='banner' data-index='{{index}}'></image>
         </swiper-item>
@@ -87,6 +87,7 @@
     <view class="shop-num">{{100}}</view>
   </view>
    <view class="box-title buy-now">
-        <view class="box-now-buy npx" bindtap="toAddShopCar">立即购买支持</view>
+        <view class="box-now-buy npx" bindtap="toAddShopCar">立即购买支持
+        </view>
       </view>
 </view>

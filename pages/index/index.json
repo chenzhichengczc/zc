@@ -1,6 +1,6 @@
 {
-  "component":true,
-    "usingComponents": {
-      "searchBar": "/components/serch/serch"
-    }
+  "component": true,
+  "usingComponents": {
+    
+  } 
 }
