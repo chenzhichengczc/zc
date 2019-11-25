@@ -137,12 +137,10 @@ Page({
 
 
   onReady: function(options) {
-
+    
   },
 
   onLoad: function(options) {
-    debugger;
-    console.log(options.data)
     var that = this;
     that.setData({
       goodDetail: JSON.parse(options.data)
