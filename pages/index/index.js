@@ -16,7 +16,7 @@ Page({
   onLoad: function() {
     var that = this;
     wx.request({
-      url: 'http://localhost/wx/project/list',
+      url:  'http://localhost/wx/project/list',
       method: 'get',
       data: {
         dataAmount: that.data.dataAmount

@@ -14,6 +14,9 @@ App({
     //获取授权信息
     that.login();
   },
+
+  
+
   getUserInfo: function(cb) {
     var that = this
     if (this.globalData.userInfo) {
