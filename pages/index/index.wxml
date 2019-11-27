@@ -13,7 +13,7 @@
     <input type="text" maxlength="100" placeholder="输入项目名" placeholder-style="color:#999999" />
   </view>
 
-  <view class="tj" style="height:{{height/2}}px;background-color:#fff">
+  <!-- <view class="tj" style="height:{{height/2}}px;background-color:#fff">
     <view class='title'>精品推荐</view>
     <view class="layout_horizontal">
       <view class="box" style="width:{{width}}rpx">
@@ -34,7 +34,7 @@
       </view>
 
     </view>
-  </view>
+  </view> -->
 
 
   <view class='maylike'>
